@@ -1,0 +1,10 @@
+
+2022/07/28 09:30:50:3050 - [INFO] Starting Test -- 1 out of 1 -- 1_Navigate_Login                                                                                       
+
+2022/07/28 09:31:17:3117 - [PASS] Navigated to 'Investec'                                                                                       
+
+2022/07/28 09:31:17:3117 - [DBUG] Scrolled to element - //html/body/div[2]/div[3]/div[7]/div[2]/div/div/div/div/div[2]/div[1]/div[2]/button                                                                                       
+
+2022/07/28 09:31:21:3121 - [PASS] Submit successful                                                                                       
+
+2022/07/28 09:31:23:3123 - [PASS] Test Complete.                                                                                       

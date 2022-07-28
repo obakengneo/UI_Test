@@ -1,0 +1,4 @@
+
+2022/07/28 09:20:59:2059 - [INFO] Starting Test -- 1 out of 1 -- 1_Navigate_Login                                                                                       
+
+2022/07/28 09:21:17:2117 - [FAIL] Failed to enter search text                                                                                       

@@ -1,0 +1,12 @@
+
+2022/07/28 09:31:53:3153 - [INFO] Starting Test -- 1 out of 1 -- 1_Navigate_Login                                                                                       
+
+2022/07/28 09:32:39:3239 - [FAIL] Failed to find Cah Investment Rates in search                                                                                       
+
+2022/07/28 09:32:45:3245 - [PASS] Navigated to 'Investec'                                                                                       
+
+2022/07/28 09:32:45:3245 - [DBUG] Scrolled to element - //html/body/div[2]/div[3]/div[7]/div[2]/div/div/div/div/div[2]/div[1]/div[2]/button                                                                                       
+
+2022/07/28 09:32:49:3249 - [PASS] Submit successful                                                                                       
+
+2022/07/28 09:32:52:3252 - [PASS] Test Complete.                                                                                       

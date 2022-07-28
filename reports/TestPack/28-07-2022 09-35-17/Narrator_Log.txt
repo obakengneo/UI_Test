@@ -1,0 +1,4 @@
+
+2022/07/28 09:35:18:3518 - [INFO] Starting Test -- 1 out of 1 -- 1_Navigate_Login                                                                                       
+
+2022/07/28 09:35:29:3529 - [PASS] Navigated to 'Understanding cash investment interest rates' page                                                                                       

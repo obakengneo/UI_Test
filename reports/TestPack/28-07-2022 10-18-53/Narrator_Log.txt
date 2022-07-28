@@ -1,0 +1,14 @@
+
+2022/07/28 10:18:54:1854 - [INFO] Starting Test -- 1 out of 1 -- 1_Understanding cash investment interest rates_SignUp                                                                                       
+
+2022/07/28 10:19:05:195  - [PASS] Navigated to 'Understanding cash investment interest rates' page                                                                                       
+
+2022/07/28 10:19:41:1941 - [FAIL] Failed to find 'Cash Investment Rates' in search results                                                                                       
+
+2022/07/28 10:19:48:1948 - [PASS] Navigated to 'Understanding cash investment interest rates' page                                                                                       
+
+2022/07/28 10:19:48:1948 - [DBUG] Scrolled to element - //html/body/div[2]/div[3]/div[7]/div[2]/div/div/div/div/div[2]/div[1]/div[2]/button                                                                                       
+
+2022/07/28 10:19:52:1952 - [PASS] Submit successful                                                                                       
+
+2022/07/28 10:19:55:1955 - [PASS] Test Complete.                                                                                       
