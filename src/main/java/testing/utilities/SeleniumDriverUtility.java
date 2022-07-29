@@ -4,7 +4,6 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
-
 import main.java.testing.TestMarshall;
 import main.java.testing.entities.Enums;
 import main.java.testing.reporting.Narrator;

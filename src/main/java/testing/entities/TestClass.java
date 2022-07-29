@@ -6,7 +6,6 @@ import com.google.common.collect.ImmutableSet;
 import com.google.common.reflect.ClassPath;
 import main.java.testing.entities.testresult.TestResult;
 import main.java.testing.utilities.SeleniumDriverUtility;
-
 import static java.lang.System.err;
 import java.util.Optional;
 import java.util.function.Predicate;

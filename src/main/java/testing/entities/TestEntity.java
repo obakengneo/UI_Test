@@ -2,8 +2,6 @@ package main.java.testing.entities;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
-import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class TestEntity {

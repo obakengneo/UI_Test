@@ -1,8 +1,6 @@
 package main.java.testing.entities;
 
 import java.util.LinkedList;
-import java.util.Optional;
-import java.util.function.Predicate;
 
 public class DataRow {
     private final LinkedList<DataColumn> DataColumns;

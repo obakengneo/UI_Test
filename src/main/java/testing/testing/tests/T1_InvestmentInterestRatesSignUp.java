@@ -6,7 +6,7 @@ import main.java.testing.entities.KeywordAnnotation;
 import main.java.testing.entities.TestEntity;
 import main.java.testing.entities.testresult.TestResult;
 import main.java.testing.reporting.Narrator;
-import main.java.testing.testing.pageObjects.ReusableObjects;
+import main.java.testing.testing.pageObjects.InvestecPageObjects;
 import main.java.testing.utilities.SeleniumDriverUtility;
 
 /**
@@ -24,64 +24,68 @@ public class T1_InvestmentInterestRatesSignUp extends BaseClass
     }
 
     public TestResult executeTest() {
-        if(!SeleniumDriverUtility.navigateToURL(ReusableObjects.baseURL())) {
-            return Narrator.testFailed("Failed to navigate to "+ ReusableObjects.baseURL());
+        if(!SeleniumDriverUtility.navigateToURL(InvestecPageObjects.baseURL())) {
+            return Narrator.testFailed("Failed to navigate to "+ InvestecPageObjects.baseURL());
         }
 
         Narrator.stepPassedWithScreenShot("Navigated to 'Understanding cash investment interest rates' page");
 
-        if (!SeleniumDriverUtility.clickElementByXpathUsingJavascript(ReusableObjects.searchIcon())) {
-            return Narrator.testFailed("Failed to click "+ ReusableObjects.searchIcon());
+        if (!SeleniumDriverUtility.clickElementByXpathUsingJavascript(InvestecPageObjects.searchIcon())) {
+            return Narrator.testFailed("Failed to click "+ InvestecPageObjects.searchIcon());
         }
 
-        if (!SeleniumDriverUtility.enterText(ReusableObjects.inputSearch(), TestMarshall.getTestData().getData("SearchText"))) {
+        if (!SeleniumDriverUtility.enterText(InvestecPageObjects.inputSearch(), TestMarshall.getTestData().getData("SearchText"))) {
             return Narrator.testFailed("Failed to enter search text");
         }
 
         //This test case would not be part of the suite as it fails manually
-        if (!SeleniumDriverUtility.clickElement(ReusableObjects.searchResults(TestMarshall.getTestData().getData("SearchKeyword")))) {
+        if (!SeleniumDriverUtility.clickElement(InvestecPageObjects.searchResults(TestMarshall.getTestData().getData("SearchKeyword")))) {
             Narrator.testFailed("Failed to find 'Cash Investment Rates' in search results");
         }
 
         //Navigate to interest rates URL
-        if(!SeleniumDriverUtility.navigateToURL(ReusableObjects.interestRatesURL())) {
-            return Narrator.testFailed("Failed to navigate to "+ ReusableObjects.interestRatesURL());
+        if(!SeleniumDriverUtility.navigateToURL(InvestecPageObjects.interestRatesURL())) {
+            return Narrator.testFailed("Failed to navigate to "+ InvestecPageObjects.interestRatesURL());
         }
 
         Narrator.stepPassedWithScreenShot("Navigated to 'Understanding cash investment interest rates' page");
 
-        if(SeleniumDriverUtility.waitForElement(ReusableObjects.btnSignUp())) {
-            SeleniumDriverUtility.scrollToElement(ReusableObjects.btnSignUp());
-            if (!SeleniumDriverUtility.clickElementByXpathUsingJavascript(ReusableObjects.btnSignUp())) {
+        //Click Sign Up button
+        if(SeleniumDriverUtility.waitForElement(InvestecPageObjects.btnSignUp())) {
+            SeleniumDriverUtility.scrollToElement(InvestecPageObjects.btnSignUp());
+            if (!SeleniumDriverUtility.clickElementByXpathUsingJavascript(InvestecPageObjects.btnSignUp())) {
                 return Narrator.testFailed("Failed to click button 'Sign up'");
             }
         }
 
-        if (!SeleniumDriverUtility.enterText(ReusableObjects.inputName(), TestMarshall.getTestData().getData("Name"))) {
+        //Enter name
+        if (!SeleniumDriverUtility.enterText(InvestecPageObjects.inputName(), TestMarshall.getTestData().getData("Name"))) {
             return Narrator.testFailed("Failed to enter name");
         }
 
-        if (!SeleniumDriverUtility.enterText(ReusableObjects.inputSurname(), TestMarshall.getTestData().getData("Surname"))) {
+        //Enter surname
+        if (!SeleniumDriverUtility.enterText(InvestecPageObjects.inputSurname(), TestMarshall.getTestData().getData("Surname"))) {
             return Narrator.testFailed("Failed to enter surname");
         }
 
-        if (!SeleniumDriverUtility.enterText(ReusableObjects.inputEmailAddress(), TestMarshall.getTestData().getData("Email"))) {
+        //Enter email
+        if (!SeleniumDriverUtility.enterText(InvestecPageObjects.inputEmailAddress(), TestMarshall.getTestData().getData("Email"))) {
             return Narrator.testFailed("Failed to enter email address");
         }
 
-        if (!SeleniumDriverUtility.clickElement(ReusableObjects.rbMyself())) {
+        if (!SeleniumDriverUtility.clickElement(InvestecPageObjects.rbMyself())) {
             return Narrator.testFailed("Failed to click checkbox 'Myself'");
         }
 
-        if (!SeleniumDriverUtility.clickElement(ReusableObjects.rbIntermediaries())) {
+        if (!SeleniumDriverUtility.clickElement(InvestecPageObjects.rbIntermediaries())) {
             return Narrator.testFailed("Failed to click checkbox 'Intermediaries'");
         }
 
-        if (!SeleniumDriverUtility.clickElement(ReusableObjects.rbMyBusiness())) {
+        if (!SeleniumDriverUtility.clickElement(InvestecPageObjects.rbMyBusiness())) {
             return Narrator.testFailed("Failed to click checkbox 'My business'");
         }
 
-        if (!SeleniumDriverUtility.clickElement(ReusableObjects.btnSubmit())) {
+        if (!SeleniumDriverUtility.clickElement(InvestecPageObjects.btnSubmit())) {
             return Narrator.testFailed("Failed to click submit");
         } else {
             Narrator.stepPassedWithScreenShot("Submit successful");
@@ -89,8 +93,9 @@ public class T1_InvestmentInterestRatesSignUp extends BaseClass
 
         SeleniumDriverInstance.pause(2000);
 
-        if(SeleniumDriverUtility.waitForElement(ReusableObjects.txtThankYou())) {
-            if (!SeleniumDriverUtility.validateElementText(ReusableObjects.txtThankYou(), "Thank you")) {
+        //Enter validate thank you text
+        if(SeleniumDriverUtility.waitForElement(InvestecPageObjects.txtThankYou())) {
+            if (!SeleniumDriverUtility.validateElementText(InvestecPageObjects.txtThankYou(), "Thank you")) {
                 return Narrator.testFailed("Failed to Sign Up");
             }
         }

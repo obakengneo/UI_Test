@@ -5,7 +5,7 @@ package main.java.testing.testing.pageObjects;
  * @author nditema
  */
 
-public class ReusableObjects
+public class InvestecPageObjects
 {
     public static String baseURL() { return "https://www.investec.com/"; }
 

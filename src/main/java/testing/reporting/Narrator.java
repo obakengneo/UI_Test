@@ -8,9 +8,7 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.CodeLanguage;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
-
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -28,7 +26,6 @@ import main.java.testing.entities.testresult.TestResult;
 import main.java.testing.utilities.SeleniumDriverUtility;
 import org.joda.time.DateTime;
 import org.joda.time.Duration;
-import org.apache.commons.codec.binary.Base64;
 
 public class Narrator {
 

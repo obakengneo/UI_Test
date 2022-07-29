@@ -1,4 +1,0 @@
-
-2022/07/28 09:16:18:1618 - [INFO] Starting Test -- 1 out of 1 -- 1_Navigate_Login                                                                                       
-
-2022/07/28 09:16:32:1632 - [FAIL] Failed to click //span[@id='search-toggler__search']                                                                                       

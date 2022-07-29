@@ -7,9 +7,7 @@ import java.io.FileWriter;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 import java.util.Properties;
-import java.util.function.Predicate;
 import main.java.testing.entities.Enums;
 import main.java.testing.entities.TestClass;
 import main.java.testing.entities.TestEntity;
@@ -28,40 +26,8 @@ public class TestMarshall {
     private static int iteration;
     private static Enums.TestType curTestType;
 
-    public static void setTestType(Enums.TestType type) {
-        curTestType = type;
-    }
-
-    public static Enums.TestType getTestType() {
-        return curTestType;
-    }
-
-    public static void setIsDataSet(Boolean isDataSet) {
-        _isDataSet = isDataSet;
-    }
-
-    public static void testData(TestEntity testdata) {
-        testData = testdata;
-    }
-
-    public void testName(String testname) {
-        this.testName = testname;
-    }
-
-    public void iteration(int Iteration) {
-        iteration = Iteration;
-    }
-
-    public void addToTestDataList(TestEntity data) {
-        testDataList.add(data);
-    }
-
     public static void addToTestResultsList(TestResult data) {
         resultsList.add(data);
-    }
-
-    public List<TestResult> getResultsList() {
-        return this.resultsList;
     }
 
     public static List<TestEntity> getTestDataList() {
@@ -73,16 +39,8 @@ public class TestMarshall {
     }
     private static Enums.ResultStatus previousTestResult;
 
-    public static Boolean getIsDataSet() {
-        return _isDataSet;
-    }
-
     public static TestEntity getTestData() {
         return testData;
-    }
-
-    public String getTestName() {
-        return this.testName;
     }
 
     {
@@ -157,16 +115,6 @@ public class TestMarshall {
 
         } catch (Exception e) {
             Narrator.logError("Could not generate project.properties");
-        }
-    }
-
-    public TestResult checkResults() {
-        Predicate<TestResult> checkStatus = c -> c.getResultStatus().equals(Enums.ResultStatus.FAIL);
-        Optional<TestResult> statusStream = resultsList.stream().filter(checkStatus).findFirst();
-        if (!statusStream.isPresent()) {
-            return new TestResult(resultsList.get(0).getTestEntity(), Enums.ResultStatus.PASS, "Passed", resultsList.get(0).getTestDuration());
-        } else {
-            return new TestResult(resultsList.get(0).getTestEntity(), Enums.ResultStatus.FAIL, "At least 1 device run failed", resultsList.get(0).getTestDuration());
         }
     }
 }
